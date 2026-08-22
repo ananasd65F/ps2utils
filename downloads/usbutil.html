@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS2Utils — Инструкция USB Util</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0b0b0b;
+            padding: 20px;
+            text-align: center;
+        }
+        nav a {
+            color: #00bcd4;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #ffffff;
+        }
+        main {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            color: #00bcd4;
+            text-align: center;
+        }
+        .instruction-box {
+            background-color: #242424;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid #00bcd4;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        ol {
+            padding-left: 20px;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        li {
+            margin-bottom: 15px;
+            color: #e0e0e0;
+        }
+        strong {
+            color: #ffffff;
+            background-color: #333;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #00bcd4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="../index.html">HOME</a>
+            <a href="DOWNLOADS.html">DOWNLOADS</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Как записать ISO образ больше 3-4 ГБ на флешку (FAT32) через USB Util</h1>
+        
+        <div class="instruction-box">
+            <p>Если вес вашего образа игры превышает лимиты файловой системы FAT32, воспользуйтесь следующей инструкцией:</p>
+            
+            <ol>
+                <li>В верхнем левом углу программы нажмите на кнопку <strong>Файл</strong>.</li>
+                <li>В выпадающем меню выберите пункт <strong>Создать игру из ISO</strong> (или используйте комбинацию клавиш <strong>Ctrl + J</strong>).</li>
+                <li>В открывшемся окне найдите и выберите ваш <strong>.iso</strong> файл (войдите в нужную папку внутри программы, и в нижнем правом углу отобразятся все доступные .iso файлы).</li>
+                <li>Напишите имя для новой игры в сокращенном варианте (например, вместо <em>Resident Evil</em> напишите <strong>re</strong>).</li>
+                <li>Нажмите кнопку <strong>Создать</strong> и дождитесь окончания процесса.</li>
+                <li>После завершения в главном меню программы появится ваша игра. Нажмите на нее <strong>Левой Кнопкой Мыши (ЛКМ)</strong>.</li>
+                <li>Нажмите кнопку <strong>Конв.</strong> (Конвертировать в ISO).</li>
+                <li>Выберите конечную папку на вашей флешке. По идее, на этом всё готово!</li>
+            </ol>
+        </div>
+
+        <a href="DOWNLOADS.html" class="back-link">← Вернуться к загрузкам</a>
+    </main>
+
+</body>
+</html>
