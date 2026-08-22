@@ -28,20 +28,23 @@
             color: #ffffff;
         }
         main {
-            max-width: 800px;
+            max-width: 600px;
             margin: 40px auto;
             padding: 0 20px;
             text-align: center;
         }
-        h1 {
+        h1, h2 {
             color: #00bcd4;
+        }
+        h2 {
+            margin-top: 40px;
+            font-size: 22px;
         }
         .download-container {
             display: flex;
             flex-direction: column;
             gap: 15px;
-            max-width: 400px;
-            margin: 30px auto;
+            margin: 20px auto;
         }
         .btn-download {
             background-color: #00bcd4;
@@ -52,9 +55,28 @@
             text-decoration: none;
             border-radius: 5px;
             transition: background 0.3s;
+            line-height: 1.4;
         }
         .btn-download:hover {
             background-color: #ffffff;
+        }
+        .btn-external {
+            background-color: #28a745; /* Зеленый цвет для внешних ссылок */
+            color: #ffffff;
+        }
+        .btn-external:hover {
+            background-color: #218838;
+            color: #ffffff;
+        }
+        .link-instruction {
+            display: inline-block;
+            margin-top: 5px;
+            color: #ffc107;
+            text-decoration: underline;
+            font-size: 14px;
+        }
+        .link-instruction:hover {
+            color: #ffffff;
         }
     </style>
 </head>
@@ -70,12 +92,25 @@
     <main>
         <h1>Доступные файлы для скачивания</h1>
         
+        <!-- Локальные файлы -->
         <div class="download-container">
-            <a href="files/fghh.ps2" class="btn-download" download>fghh</a>
-            <a href="files/scph-39xxx" class="btn-download" download>scph-39xxx</a>
+            <a href="files/fghh.ps2" class="btn-download" download>Образ карты памяти для PS2 с установленным Funtuna-Fork (16MB с scph39xxx прошивкой)</a>
             <a href="files/FunTuna-Fork_Installer.ELF" class="btn-download" download>FunTuna-Fork_Installer</a>
             <a href="files/ps2 save builder.zip" class="btn-download" download>ps2 save builder</a>
-            <a href="files/scph39004.zip" class="btn-download" download>scph39004</a>
+            <a href="files/scph39004.zip" class="btn-download" download>ps2 bios scph39004</a>
+        </div>
+
+        <h2>Сторонние ресурсы и утилиты</h2>
+        
+        <!-- Внешние ссылки -->
+        <div class="download-container">
+            <a href="https://static2.oplmanager.com/releases/OPL_Manager_V24.zip" class="btn-download btn-external" target="_blank" rel="noopener noreferrer">OPL Manager (V24)</a>
+            
+            <div>
+                <a href="https://psx-core.ru/load/0-0-0-875-20" class="btn-download btn-external" target="_blank" rel="noopener noreferrer">USB Util</a>
+                <br>
+                <a href="usbutil.html" class="link-instruction">Читать инструкцию по использованию USB Util</a>
+            </div>
         </div>
     </main>
 
