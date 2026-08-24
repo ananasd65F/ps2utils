@@ -15,16 +15,21 @@
         .nav-links a { text-decoration: none; color: #fff; font-weight: 600; padding: 8px 16px; border-radius: 6px; transition: all 0.2s ease; }
         .nav-links a:hover, .nav-links a.active { background-color: #008dff; color: #fff; }
         main { max-width: 700px; margin: 40px auto; padding: 0 20px; }
-        h1 { font-size: 32px; color: #0b192c; margin-bottom: 25px; text-align: center; }
+        h1 { font-size: 32px; color: #0b192c; margin-bottom: 10px; text-align: center; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 30px; font-size: 16px; }
         h2 { font-size: 22px; color: #0b192c; margin: 35px 0 15px 0; border-bottom: 2px solid #008dff; padding-bottom: 5px; }
-        .card { background: #fff; border-radius: 8px; border: 1px solid #e1e6eb; padding: 20px; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.02); display: flex; flex-direction: column; gap: 12px; }
-        .card-meta { font-size: 14px; color: #666; }
-        .btn-flex { display: flex; justify-content: space-between; align-items: center; background-color: #0b192c; color: #fff; text-decoration: none; padding: 12px 20px; border-radius: 6px; font-weight: 600; transition: all 0.2s ease; }
+        .download-list { display: flex; flex-direction: column; gap: 12px; }
+        .btn-flex { display: flex; justify-content: space-between; align-items: center; background-color: #0b192c; color: #fff; text-decoration: none; padding: 14px 20px; border-radius: 8px; font-weight: 600; transition: all 0.2s ease; }
         .btn-flex:hover { background-color: #008dff; }
-        .btn-secondary { display: inline-block; text-align: center; background-color: #e4e9f0; color: #0b192c; text-decoration: none; padding: 8px 15px; border-radius: 6px; font-weight: 600; font-size: 14px; transition: all 0.2s ease; }
-        .btn-secondary:hover { background-color: #d1d9e6; }
-        .ext-link { display: inline-block; color: #008dff; font-weight: 600; text-decoration: none; margin-bottom: 8px; }
+        .btn-secondary { display: flex; justify-content: center; align-items: center; background-color: #e4e9f0; color: #0b192c; text-decoration: none; padding: 12px 20px; border-radius: 8px; font-weight: 600; margin-top: 12px; transition: all 0.2s ease; }
+        .btn-secondary:hover { background-color: #d1d9e6; color: #0052cc; }
+        .ext-card { background: #fff; border-radius: 8px; border: 1px solid #e1e6eb; padding: 15px; display: flex; flex-direction: column; gap: 5px; }
+        .ext-link { color: #008dff; font-weight: 600; text-decoration: none; font-size: 18px; }
         .ext-link:hover { text-decoration: underline; }
+        .ext-desc { font-size: 14px; color: #666; }
+        
+        #scrollTopBtn { display: none; position: fixed; bottom: 20px; right: 20px; z-index: 99; background-color: #008dff; color: white; border: none; outline: none; cursor: pointer; padding: 12px 16px; border-radius: 8px; font-size: 18px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: background-color 0.2s; }
+        #scrollTopBtn:hover { background-color: #006ec7; }
     </style>
 </head>
 <body>
@@ -41,36 +46,40 @@
 
     <main>
         <h1>Файлы для скачивания</h1>
+        <div class="subtitle">Образ карты памяти для PS2 с установленным Funtuna-Fork (16MB с scph39xxx прошивкой)</div>
 
-        <div class="card">
-            <div class="card-meta">Образ карты памяти для PS2 с установленным Funtuna-Fork (16MB с scph39xxx прошивкой)</div>
+        <div class="download-list">
             <a href="files/fghh.ps2" class="btn-flex" download><span>fghh</span> <span>📥</span></a>
             <a href="files/scph-39xxx" class="btn-flex" download><span>scph-39xxx</span> <span>📥</span></a>
             <a href="files/FunTuna-Fork_Installer.ELF" class="btn-flex" download><span>FunTuna-Fork_Installer</span> <span>📥</span></a>
-        </div>
-
-        <div class="card">
-            <div class="card-meta">Утилита для работы с сейвами на ПК</div>
             <a href="files/ps2 save builder.zip" class="btn-flex" download><span>ps2 save builder</span> <span>📥</span></a>
+            <a href="files/scph39004.zip" class="btn-flex" download><span>ps2 bios scph39004</span> <span>📥</span></a>
+            <a href="files/USBUtilv2.2rev1" class="btn-flex" download><span>USBUtilv2.2rev1</span> <span>📥</span></a>
         </div>
 
-        <div class="card">
-            <div class="card-meta">Официальный дамп биоса консоли</div>
-            <a href="files/scph39004.zip" class="btn-flex" download><span>scph39004</span> <span>📥</span></a>
-        </div>
-
-        <div class="card">
-            <div class="card-meta">Программа для нарезки игр под FAT32 флешки</div>
-            <a href="files/USBUtilv2.2rev1.zip" class="btn-flex" download><span>USBUtilv2.2rev1</span> <span>📥</span></a>
-            <a href="usbutil.html" class="btn-secondary">Читать инструкцию по использованию USB Util</a>
-        </div>
+        <a href="usbutil.html" class="btn-secondary">Читать инструкцию по использованию USB Util</a>
 
         <h2>Сторонние ресурсы</h2>
-        <div class="card">
+        <div class="ext-card">
             <a href="https://github.com" target="_blank" class="ext-link">OPL Manager (V24) ↗</a>
-            <div class="card-meta">Официальный менеджер для управления и загрузки обложек к играм Open PS2 Loader.</div>
         </div>
     </main>
+
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Наверх">▲</button>
+
+    <script>
+        const scrollBtn = document.getElementById("scrollTopBtn");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 
 </body>
 </html>
