@@ -21,6 +21,9 @@
         strong { color: #0b192c; background: #f0f4f8; padding: 2px 6px; border-radius: 4px; font-family: inherit; }
         .back-link { display: inline-block; color: #008dff; text-decoration: none; font-weight: 600; transition: color 0.2s; }
         .back-link:hover { color: #006ec7; text-decoration: underline; }
+        
+        #scrollTopBtn { display: none; position: fixed; bottom: 20px; right: 20px; z-index: 99; background-color: #008dff; color: white; border: none; outline: none; cursor: pointer; padding: 12px 16px; border-radius: 8px; font-size: 18px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: background-color 0.2s; }
+        #scrollTopBtn:hover { background-color: #006ec7; }
     </style>
 </head>
 <body>
@@ -51,6 +54,22 @@
 
         <a href="DOWNLOADS.html" class="back-link">← Вернуться к загрузкам</a>
     </main>
+
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Наверх">▲</button>
+
+    <script>
+        const scrollBtn = document.getElementById("scrollTopBtn");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 
 </body>
 </html>
