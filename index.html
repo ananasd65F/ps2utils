@@ -19,6 +19,10 @@
         p { font-size: 18px; color: #555; margin-bottom: 35px; }
         .btn-cta { display: inline-block; background-color: #008dff; color: #fff; text-decoration: none; padding: 14px 32px; font-size: 18px; font-weight: 700; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,141,255,0.3); transition: all 0.2s ease; }
         .btn-cta:hover { background-color: #006ec7; transform: translateY(-1px); }
+        
+        /* Кнопка наверх */
+        #scrollTopBtn { display: none; position: fixed; bottom: 20px; right: 20px; z-index: 99; background-color: #008dff; color: white; border: none; outline: none; cursor: pointer; padding: 12px 16px; border-radius: 8px; font-size: 18px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: background-color 0.2s; }
+        #scrollTopBtn:hover { background-color: #006ec7; }
     </style>
 </head>
 <body>
@@ -36,8 +40,25 @@
     <main>
         <h1>Добро пожаловать</h1>
         <p>Это ваш главный ресурс для настройки и прокачки PlayStation 2. На этом сайте вы можете найти полезные программы, утилиты, сохранения и необходимые файлы для вашей консоли PS2.</p>
+        <p>Перейдите в раздел загрузок, чтобы скачать нужный софт.</p>
         <a href="downloads/DOWNLOADS.html" class="btn-cta">Перейти в раздел загрузок</a>
     </main>
+
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Наверх">▲</button>
+
+    <script>
+        const scrollBtn = document.getElementById("scrollTopBtn");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 
 </body>
 </html>
