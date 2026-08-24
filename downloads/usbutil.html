@@ -4,99 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PS2Utils — Инструкция USB Util</title>
+    <link rel="icon" type="image/x-icon" href="../convertico-favicon.ico">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #1a1a1a;
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #0b0b0b;
-            padding: 20px;
-            text-align: center;
-        }
-        nav a {
-            color: #00bcd4;
-            text-decoration: none;
-            font-size: 18px;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #ffffff;
-        }
-        main {
-            max-width: 700px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        h1 {
-            color: #00bcd4;
-            text-align: center;
-        }
-        .instruction-box {
-            background-color: #242424;
-            padding: 25px;
-            border-radius: 8px;
-            border-left: 5px solid #00bcd4;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
-        ol {
-            padding-left: 20px;
-            line-height: 1.8;
-            font-size: 16px;
-        }
-        li {
-            margin-bottom: 15px;
-            color: #e0e0e0;
-        }
-        strong {
-            color: #ffffff;
-            background-color: #333;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: monospace;
-        }
-        .back-link {
-            display: inline-block;
-            margin-top: 20px;
-            color: #00bcd4;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .back-link:hover {
-            text-decoration: underline;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background-color: #f4f6f9; color: #222; line-height: 1.6; }
+        header { background-color: #0b192c; box-shadow: 0 2px 10px rgba(0,0,0,0.15); position: sticky; top: 0; z-index: 100; }
+        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
+        .logo { font-size: 22px; font-weight: 800; color: #008dff; text-decoration: none; letter-spacing: 1px; }
+        .nav-links { display: flex; gap: 15px; }
+        .nav-links a { text-decoration: none; color: #fff; font-weight: 600; padding: 8px 16px; border-radius: 6px; transition: all 0.2s ease; }
+        .nav-links a:hover { background-color: #008dff; color: #fff; }
+        main { max-width: 750px; margin: 40px auto; padding: 30px; background: #fff; border-radius: 8px; border: 1px solid #e1e6eb; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+        h1 { font-size: 26px; color: #0b192c; margin-bottom: 20px; line-height: 1.3; }
+        ol { padding-left: 20px; margin-bottom: 30px; }
+        li { margin-bottom: 12px; font-size: 16px; }
+        strong { color: #0b192c; background: #f0f4f8; padding: 2px 6px; border-radius: 4px; font-family: inherit; }
+        .back-link { display: inline-block; color: #008dff; text-decoration: none; font-weight: 600; transition: color 0.2s; }
+        .back-link:hover { color: #006ec7; text-decoration: underline; }
     </style>
 </head>
 <body>
 
     <header>
         <nav>
-            <a href="../index.html">HOME</a>
-            <a href="DOWNLOADS.html">DOWNLOADS</a>
+            <a href="../index.html" class="logo">PS2 UTILS</a>
+            <div class="nav-links">
+                <a href="../index.html">HOME</a>
+                <a href="DOWNLOADS.html">DOWNLOADS</a>
+            </div>
         </nav>
     </header>
 
     <main>
         <h1>Как записать ISO образ больше 3-4 ГБ на флешку (FAT32) через USB Util</h1>
         
-        <div class="instruction-box">
-            <p>Если вес вашего образа игры превышает лимиты файловой системы FAT32, воспользуйтесь следующей инструкцией:</p>
-            
-            <ol>
-                <li>В верхнем левом углу программы нажмите на кнопку <strong>Файл</strong>.</li>
-                <li>В выпадающем меню выберите пункт <strong>Создать игру из ISO</strong> (или используйте комбинацию клавиш <strong>Ctrl + J</strong>).</li>
-                <li>В открывшемся окне найдите и выберите ваш <strong>.iso</strong> файл (войдите в нужную папку внутри программы, и в нижнем правом углу отобразятся все доступные .iso файлы).</li>
-                <li>Напишите имя для новой игры в сокращенном варианте (например, вместо <em>Resident Evil</em> напишите <strong>re</strong>).</li>
-                <li>Нажмите кнопку <strong>Создать</strong> и дождитесь окончания процесса.</li>
-                <li>После завершения в главном меню программы появится ваша игра. Нажмите на нее <strong>Левой Кнопкой Мыши (ЛКМ)</strong>.</li>
-                <li>Нажмите кнопку <strong>Конв.</strong> (Конвертировать в ISO).</li>
-                <li>Выберите конечную папку на вашей флешке. По идее, на этом всё готово!</li>
-            </ol>
-        </div>
+        <ol>
+            <li>В верхнем левом углу программы нажмите на кнопку <strong>Файл</strong>.</li>
+            <li>В выпадающем меню выберите пункт <strong>Создать игру из ISO</strong> (или используйте комбинацию клавиш <strong>Ctrl + J</strong>).</li>
+            <li>В открывшемся окне найдите и выберите ваш <strong>.iso</strong> файл (войдите в нужную папку внутри программы, и в нижнем правом углу отобразятся все доступные .iso файлы).</li>
+            <li>Напишите имя для новой игры в сокращенном варианте (например, вместо <em>Resident Evil</em> напишите <strong>re</strong>).</li>
+            <li>Нажмите кнопку <strong>Создать</strong> и дождитесь окончания процесса.</li>
+            <li>После завершения в главном меню программы появится ваша игра. Нажмите на нее <strong>Левой Кнопкой Мыши (ЛКМ)</strong>.</li>
+            <li>Нажмите кнопку <strong>Конв.</strong> (Конвертировать в ISO).</li>
+            <li>Выберите конечную папку на вашей флешке. По идее, на этом всё готово!</li>
+        </ol>
 
         <a href="DOWNLOADS.html" class="back-link">← Вернуться к загрузкам</a>
     </main>
