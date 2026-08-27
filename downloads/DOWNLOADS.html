@@ -20,6 +20,7 @@
         .download-list { display: flex; flex-direction: column; gap: 12px; }
         .btn-flex { display: flex; justify-content: space-between; align-items: center; background-color: #0b192c; color: #fff; text-decoration: none; padding: 14px 20px; border-radius: 8px; font-weight: 600; transition: all 0.2s ease; }
         .btn-flex:hover { background-color: #008dff; }
+        .btn-flex span small { display: block; font-size: 12px; color: #a1cfff; font-weight: normal; margin-top: 2px; }
         .btn-secondary { display: flex; justify-content: center; align-items: center; background-color: #e4e9f0; color: #0b192c; text-decoration: none; padding: 12px 20px; border-radius: 8px; font-weight: 600; margin-top: 12px; transition: all 0.2s ease; }
         .btn-secondary:hover { background-color: #d1d9e6; color: #0052cc; }
         .ext-card { background: #fff; border-radius: 8px; border: 1px solid #e1e6eb; padding: 15px; display: flex; flex-direction: column; gap: 5px; }
@@ -48,10 +49,21 @@
         <div class="download-list">
             <a href="files/fghh.ps2" class="btn-flex" download><span>Образ карты памяти для PS2 с установленным Funtuna-Fork (16MB с scph39xxx прошивкой)</span> <span>📥</span></a>
             <a href="files/FunTuna-Fork_Installer.ELF" class="btn-flex" download><span>FunTuna-Fork_Installer</span> <span>📥</span></a>
-            <a href="files/ps2 save builder.zip" class="btn-flex" download><span>ps2 save builder</span> <span>📥</span></a>
+            
+            <!-- Кнопка ps2 save builder с подсказкой о режиме совместимости -->
+            <a href="files/ps2 save builder.zip" class="btn-flex" download>
+                <span>ps2 save builder<small>Нужно запускать в режиме совместимости с Windows XP (Пакет обновления 3)</small></span> 
+                <span>📥</span>
+            </a>
+            
             <a href="files/scph39004.zip" class="btn-flex" download><span>ps2 bios scph39004</span> <span>📥</span></a>
-            <!-- Путь обновлен на файлы в папке downloads/files/ с новым названием архива -->
             <a href="files/USBUtil2dot2.rar" class="btn-flex" download><span>USBUtil2dot2</span> <span>📥</span></a>
+            
+            <!-- Новая кнопка MyMC -->
+            <a href="files/914_mymc_2.rar" class="btn-flex" download><span>MyMC</span> <span>📥</span></a>
+            
+            <!-- Новая кнопка PS2 IconSysby ticky -->
+            <a href="files/PS2IconSys_bytickyongithub.zip" class="btn-flex" download><span>PS2 IconSysby ticky (iconsys_builder, obj_to_ps2icon, ps2icon_to_obj)</span> <span>📥</span></a>
         </div>
 
         <a href="usbutil.html" class="btn-secondary">Читать инструкцию по использованию USB Util</a>
