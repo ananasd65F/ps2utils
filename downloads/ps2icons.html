@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS2Utils — Иконки</title>
+    <link rel="icon" type="image/x-icon" href="/convertico-favicon.ico">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background-color: #f4f6f9; color: #222; line-height: 1.6; }
+        header { background-color: #0b192c; box-shadow: 0 2px 10px rgba(0,0,0,0.15); position: sticky; top: 0; z-index: 100; }
+        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
+        .logo { font-size: 22px; font-weight: 800; color: #008dff; text-decoration: none; letter-spacing: 1px; }
+        .nav-links { display: flex; gap: 15px; }
+        .nav-links a { text-decoration: none; color: #fff; font-weight: 600; padding: 8px 16px; border-radius: 6px; transition: all 0.2s ease; }
+        .nav-links a:hover, .nav-links a.active { background-color: #008dff; color: #fff; }
+        
+        main { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        h1.page-title { font-size: 32px; color: #0b192c; margin-bottom: 30px; text-align: center; }
+        
+        .icons-container { display: flex; flex-direction: column; gap: 25px; }
+        
+        /* Карточка иконки по макету */
+        .icon-card { display: flex; background: #fff; border-radius: 8px; border: 1px solid #e1e6eb; box-shadow: 0 2px 5px rgba(0,0,0,0.02); overflow: hidden; }
+        .icon-info { flex: 1; padding: 25px; display: flex; flex-direction: column; justify-content: center; }
+        .icon-info h2 { font-size: 24px; color: #0b192c; margin-bottom: 12px; }
+        .icon-info p { font-size: 15px; color: #555; }
+        
+        .icon-media { width: 241px; display: flex; flex-direction: column; background: #fdfdfd; border-left: 1px solid #e1e6eb; }
+        .icon-img { width: 241px; height: 221px; object-fit: contain; background: #eef2f7; display: block; }
+        .btn-download { display: block; text-align: center; background-color: #0b192c; color: #fff; text-decoration: none; padding: 14px 0; font-weight: 700; font-size: 16px; transition: all 0.2s ease; }
+        .btn-download:hover { background-color: #008dff; }
+
+        #scrollTopBtn { display: none; position: fixed; bottom: 20px; right: 20px; z-index: 99; background-color: #008dff; color: white; border: none; outline: none; cursor: pointer; padding: 12px 16px; border-radius: 8px; font-size: 18px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: background-color 0.2s; }
+        #scrollTopBtn:hover { background-color: #006ec7; }
+        
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 600px) {
+            .icon-card { flex-direction: column; }
+            .icon-media { width: 100%; border-left: none; border-top: 1px solid #e1e6eb; }
+            .icon-img { width: 100%; margin: 0 auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">PS2 UTILS</a>
+            <div class="nav-links">
+                <a href="../index.html">HOME</a>
+                <a href="DOWNLOADS.html">DOWNLOADS</a>
+                <a href="ps2icons.html" class="active">ICONS</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-title">3D Иконки для сохранений</h1>
+        <div class="icons-container">
+
+            <!-- Шаблон одной карточки иконки -->
+            <div class="icon-card">
+                <div class="icon-info">
+                    <h2>TF2 Телепорт</h2>
+                    <p>Это иконка с телепортом из игры Team Fortress 2. Он имеет три иконки: просмотр, удаление, копия. В icon.sys настроены цвета, их видно на фото.</p>
+                </div>
+                <div class="icon-media">
+                    <img src="icons/teleporter.png" alt="TF2 Телепорт" class="icon-img" width="241" height="221">
+                    <a href="icons/teleporter.zip" class="btn-download" download>Скачать</a>
+                </div>
+            </div>
+            <!-- Конец шаблона. Новые карточки вставлять ниже этой строки -->
+
+        </div>
+    </main>
+
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Наверх">▲</button>
+
+    <script>
+        const scrollBtn = document.getElementById("scrollTopBtn");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+        function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+    </script>
+
+</body>
+</html>
